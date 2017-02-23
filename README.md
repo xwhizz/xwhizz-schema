@@ -1,0 +1,2 @@
+# xwhizz-schema
+Database schema
