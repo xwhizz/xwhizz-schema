@@ -12,16 +12,9 @@ INSERT INTO xw_users (username,password,isadmin,issuperuser,createdby,createddat
 VALUES ('admin@xwhizz.com','admin@xwhizz2017',1,0,1,GETDATE(),1,GETDATE())
 GO
 --INSERT ROLE TABLE----
-INSERT INTO xw_roles (rolename,createdby,createddate,updatedby,updateddate)
-VALUES ('superuser',1,GETDATE(),1,GETDATE())
-GO
-INSERT INTO xw_roles (rolename,createdby,createddate,updatedby,updateddate)
-VALUES ('admin',1,GETDATE(),1,GETDATE())
-GO
---INSERT USER ROLES---
-INSERT INTO xw_userroles (userid,roleid,createdby,createddate,updatedby,updateddate)
-VALUES (1,1,1,GETDATE(),1,GETDATE());
-GO
-INSERT INTO xw_userroles (userid,roleid,createdby,createddate,updatedby,updateddate)
-VALUES (2,2,1,GETDATE(),1,GETDATE());
-GO
+INSERT INTO xw_roles (rolename,createdby,createddate,updatedby,updateddate) VALUES ('superuser',1,CURRENT_TIMESTAMP,1,CURRENT_TIMESTAMP);
+INSERT INTO xw_roles (rolename,createdby,createddate,updatedby,updateddate) VALUES ('admin',1,CURRENT_TIMESTAMP,1,CURRENT_TIMESTAMP);
+
+INSERT INTO xw_userroles (userid,roleid,createdby,createddate,updatedby,updateddate) VALUES (1,1,1,CURRENT_TIMESTAMP,1,CURRENT_TIMESTAMP);
+
+INSERT INTO xw_userroles (userid,roleid,createdby,createddate,updatedby,updateddate) VALUES (2,2,1,CURRENT_TIMESTAMP,1,CURRENT_TIMESTAMP);

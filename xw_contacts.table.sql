@@ -1,8 +1,8 @@
-create table xw_contacts
+CREATE TABLE `xwhizz`.`xw_contacts` 
 (
-id bigint primary key identity(1,1),
-name varchar(200),
-email varchar(100),
-subject varchar(100),
-message varchar(2000)
-)
+`id` BIGINT NOT NULL AUTO_INCREMENT , 
+`name` VARCHAR(200) NOT NULL , 
+`email` VARCHAR(100) NOT NULL , 
+`subject` VARCHAR(100) NOT NULL , 
+`message` VARCHAR(2000) NOT NULL , 
+PRIMARY KEY (`id`)) ENGINE = InnoDB;
